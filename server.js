@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const port = 5000;
 
-// --- MIDDLEWARE ---
+// --- MIDDLEWARE ---k                
 app.use(cors());
 app.use(express.json());
 
@@ -22,11 +22,15 @@ const ADMIN_CREDENTIALS = {
 // --- DATABASE CONNECTION ---
 // IMPORTANT: Replace with your actual database credentials
 const db = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
+  host: 'webcraftpro-db-sharmamanthan1309-daff.h.aivencloud.com',
+  user: 'avnadmin',
+  port:12892,
   //10122004
-  password: 'root',
-  database: 'portfolio_db',
+  password: 'AVNS_MPvI5rzUw8UjM34uOf7',
+  database: 'defaultdb',
+  ssl: {
+    rejectUnauthorized: false
+  }
 }).promise();
 
 // --- DATABASE TABLE SETUP ---
