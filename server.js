@@ -22,12 +22,12 @@ const ADMIN_CREDENTIALS = {
 // --- DATABASE CONNECTION ---
 // IMPORTANT: Replace with your actual database credentials
 const db = mysql.createPool({
-  host: 'webcraftpro-db-sharmamanthan1309-daff.h.aivencloud.com',
-  user: 'avnadmin',
-  port:12892,
+   host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
   //10122004
-  password: 'AVNS_MPvI5rzUw8UjM34uOf7',
-  database: 'defaultdb',
   ssl: {
     rejectUnauthorized: false
   }
